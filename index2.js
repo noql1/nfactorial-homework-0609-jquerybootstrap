@@ -1,14 +1,11 @@
 $('document').ready(function() {
-    $('button').on('click', function() {
-        console.log("hello")
-        let Width = $('width').val();
-        let Height = $('height').val();
-        let NColors = $('ncol').val();
-        let result = Width*Height*Ncolors/1024;
-        let textResult= result.empty().append($('result')).val() + "KB";
-
-        if(result<10){
-
-        }
+    $('.btn').on('click', function() {
+        let Width = $('#width').val();
+        console.log(Width);
+        let Height = $('#height').val();
+        let NCol = $('#ncol').val();
+        let calc = Width*Height*NCol/1024;
+        console.log(calc);
+        $("#result").append(calc);
 })
 })
